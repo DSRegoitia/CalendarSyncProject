@@ -68,7 +68,7 @@ def sql_Queries():
 
     query = 'SELECT TOP (15) [AppointmentID],[StartDate],[EndDate],[AppointmentName],[AssignedTo],[Description],' \
             '[CreatedDate],[CreatedBy]' \
-            'FROM [SQL2012_1010845_agenciahisp].[dbo].[Appointments]' \
+            'FROM [database].[dbo].[Appointments]' \
             'ORDER BY AppointmentID DESC'
     sql_table = pd.read_sql(query, cnxn)
     df_appointments = pd.DataFrame(sql_table)
